@@ -1,0 +1,13 @@
+.hidden{
+    display:none;
+}
+
+div{
+    cursor: pointer;
+}
+
+#container{
+    background-color: red;
+    width: fit-content;
+    height: fit-content;
+}
