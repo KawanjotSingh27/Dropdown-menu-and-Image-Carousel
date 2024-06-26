@@ -10,26 +10,13 @@ const circles=document.querySelectorAll('.circle');
 circle_one.style.backgroundColor="white";
 
 right.addEventListener("click",()=>{
-    let currentMargin = parseInt(window.getComputedStyle(images).marginLeft);
-    console.log(currentMargin);
-    if(currentMargin==-900){
-        images.style.marginLeft="0px"
-    }
-    else{
-        images.style.marginLeft=`${currentMargin-450}px`;
-    }
-    fillCircle()
+    rightMove();
 })
 
+setInterval(rightMove,5000);
+
 left.addEventListener("click",()=>{
-    let currentMargin = parseInt(window.getComputedStyle(images).marginLeft);
-    if(currentMargin==0){
-        images.style.marginLeft="-900px"
-    }
-    else{
-        images.style.marginLeft=`${currentMargin+450}px`;
-    }
-    fillCircle()
+    leftMove();
 })
 
 circle_one.addEventListener("click",()=>{
@@ -46,6 +33,29 @@ circle_three.addEventListener("click",()=>{
     images.style.marginLeft="-900px";
     fillCircle()
 })
+
+function rightMove(){
+    let currentMargin = parseInt(window.getComputedStyle(images).marginLeft);
+    console.log(currentMargin);
+    if(currentMargin==-900){
+        images.style.marginLeft="0px"
+    }
+    else{
+        images.style.marginLeft=`${currentMargin-450}px`;
+    }
+    fillCircle()
+}
+
+function leftMove(){
+    let currentMargin = parseInt(window.getComputedStyle(images).marginLeft);
+    if(currentMargin==0){
+        images.style.marginLeft="-900px"
+    }
+    else{
+        images.style.marginLeft=`${currentMargin+450}px`;
+    }
+    fillCircle()
+}
 
 function fillCircle(){
     let currentMargin = parseInt(window.getComputedStyle(images).marginLeft);
