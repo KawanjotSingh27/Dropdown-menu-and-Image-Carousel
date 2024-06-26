@@ -1,0 +1,65 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: #42423e;
+}
+
+img{
+    height:300px;
+    width:auto;
+    margin:0px;
+}
+
+body>div:nth-of-type(1){
+    margin-top: 80px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+body>div:nth-of-type(2){
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap:20px;
+}
+
+#images{
+    display:flex;
+    width: 1350px;
+    margin-left:-0px;
+}
+
+/* margin left shifts the images after every -450px */
+
+#frame{
+    width:450px;
+    overflow: hidden;
+}
+
+body>div>img{
+    height:70px;
+    width: auto;
+    
+}
+
+.circle{
+    border:2px solid black;
+    width:15px;
+    height:15px;
+    border-radius: 50%;
+}
+
+.circle:hover{
+    cursor: pointer;
+}
+
+p{
+    display:flex;
+    justify-content: center;
+    color: white;
+    margin-top: 100px;
+    font-size: 60px;
+    font-weight: 700
+}
